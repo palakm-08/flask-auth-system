@@ -1,5 +1,4 @@
-from project import app
-from project import db
+from project import app, db
 
 @app.route('/')
 def home():
