@@ -19,3 +19,11 @@ class RegisterForm(FlaskForm):
         email = User.query.filter_by(email=email_to_check.data).first()
         if email:
             raise ValidationError('Email address already exists! Please try a different email address')
+        
+
+class LoginForm(FlaskForm):
+    username = StringField(label='Username', validators=[Length(min=4, max=25), DataRequired()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
+    submit = SubmitField(label='Sign In')
+
+    
