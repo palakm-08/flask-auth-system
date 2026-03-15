@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="text-center font-weight-normal my-5" style="font-family: Cedarville Cursive, poppins, Arial, Helvetica, sans-serif;">Flask-auth-system</h1>
+<div class="container" style="max-width: 25rem;">
+    <form method="POST" class="form-login" style="font-family: poppins, Arial, Helvetica, sans-serif;">
+        {{form.username.label()}}
+        {{form.hidden_tag()}}
+        {{form.username(class="form-control", placeholder="Username", style="margin-bottom:2rem")}}
+
+        {{form.password.label()}}
+        {{form.password(class="form-control", placeholder="password", style="margin-bottom:2rem")}}
+
+        {{form.submit(class="btn btn-primary btn-lg btn-block my-3" )}}
+    </form>
+</div>
+
+{% endblock %}
